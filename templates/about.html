@@ -1,0 +1,41 @@
+{%extends "layout.html" %}
+
+
+
+{% block content %}
+
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('  {{  url_for('static', filename='img/abt.jpg') }}    ')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>About Me</h1>
+                            <span class="subheading">This is what I am</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                       
+                       <p>                       "The unsaid is the biggest regret"</p>
+                        <p>Hey reader, this is a blog created by me where I share my thoughts with you readers.</p>
+                        <p>This is me "Pratham Chaurasia", who is currently a B-Tech student at IITJodhpur. I have created this website as a learner and it has turned out to be an amazing journey throughout. I always wanted to share my thoughts with the world, and this blog gave me a perfect platform to do so.</p>
+                        <p>Hope you all will enjoy this. You can also connect me through social media handles by clicking on the icons given at the end of this page. You can also mail by <a href="/contact" style="none">clicking here</a></p>
+
+                        <br>
+                        <p>Thank you.</p>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+
+{% endblock %}

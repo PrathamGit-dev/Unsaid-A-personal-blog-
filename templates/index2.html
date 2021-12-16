@@ -1,0 +1,71 @@
+{%extends "layout2.html" %}
+
+{% block content %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('  {{  url_for('static', filename='img/back.jpg') }}    ')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>{{params['blog_name']}}</h1>
+                            <span class="subheading">A Blog by<i> Pratham</i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+
+
+<!-- <div class="d-flex justify-content-start mb-4"><a class="btn btn-primary text-uppercase" href="/dashboard">Move to Dashboard →</a></div> -->
+<!-- <hr>
+    <div class="d-flex justify-content-start mb-4"><a class="btn btn-primary text-uppercase" href="/add">Say something... →</a></div>
+     -->
+<hr>
+    <!-- fetch it using for loop from database -->
+
+    {% for post in posts %}
+    
+
+                    <div class="post-preview">
+                        <a href="/post/{{post.slug}}">
+                            <h2 class="post-title">{{post.title}}</h2>
+                            <h3 class="post-subtitle">{{post.tagline}}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">{{post.author}}</a>
+                            on {{post.date}}
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    {{post.content[0:3]}}...
+
+
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                
+                    {% endfor %}
+
+
+                    <hr class="my-4" />
+                    <!-- Pager-->
+                    <div class="clearfix" align="justify-content-center">
+                        {% if prev=='#' %}
+                        <!-- <a class="btn btn-primary float-left" href="{{prev}}">Previous Posts →</a> -->
+                    <a class="btn btn-primary float-right" href="{{next}}">Older Posts →</a></div>
+                    {% elif next=='#' %}
+                    <a class="btn btn-primary float-left" href="{{prev}}">← Recent Posts</a>
+                    {% else %}
+                    <a class="btn btn-primary float-left" href="{{prev}}">← Recent Posts</a>
+                    <a class="btn btn-primary float-right" href="{{next}}">Older Posts →</a></div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/database_name",
+    "prod_uri": "mysql://root:@localhost/database_name",
+    "blog_name": "Unsaid",
+    "gmail-user": "you@gmail.com",
+    "gmail-password": "gmailpassword",
+    "insta": "link for your insta account",
+    "fb": "link for your fb account",
+    "admin_user": "user",
+    "admin_pass": "pass",
+    "max_post": "3"
+  }
+}
